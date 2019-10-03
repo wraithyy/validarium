@@ -18,8 +18,7 @@ This package contains all core functionalities for Validarium.
 <a name="module_core.validate"></a>
 
 ### core.validate
-Applies validations in `descriptor` for `value`.
-Params are curried.
+Applies validations in `descriptor` for `value`.Params are curried.
 
 **Sig**: Object -> a -> b  
 
@@ -30,21 +29,7 @@ Params are curried.
 
 **Example**  
 ```js
-validate({
-	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
-	name: [(x) => !x && 'Is required.'],
-	surname: [(x) => !x && 'Is required.'],
-}, {
-		id: -1,
-		surname: 'Doe',
-	}
-])
-// Output:
-// 	{
-// 		id: 'Must be greater than 0.',
-// 		name: 'Is required.',
-// 		surname: false,
-// 	}
+validate({	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],	name: [(x) => !x && 'Is required.'],	surname: [(x) => !x && 'Is required.'],}, {		id: -1,		surname: 'Doe',	}])// Output:// 	{// 		id: 'Must be greater than 0.',// 		name: 'Is required.',// 		surname: false,// 	}
 ```
 
 * * *
@@ -52,8 +37,7 @@ validate({
 <a name="module_core.validateMany"></a>
 
 ### core.validateMany
-Applies validations in `descriptor` for each item in `values`.
-Params are curried.
+Applies validations in `descriptor` for each item in `values`.Params are curried.
 
 **Sig**: Object -> [Object] -> [Object]  
 
@@ -64,32 +48,7 @@ Params are curried.
 
 **Example**  
 ```js
-validateMany({
-	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],
-	name: [(x) => !x && 'Is required.'],
-	surname: [(x) => !x && 'Is required.'],
-}, [
-	{
-		id: -1,
-		surname: 'Doe',
-	},
-	{
-		id: 13,
-		name: 'Bob',
-	},
-])
-// Output:
-// [
-// 	{
-// 		id: 'Must be greater than 0.',
-// 		name: 'Is required.',
-// 		surname: false,
-// 	}, {
-// 		id: false,
-// 		name: false,
-// 		surname: 'Is required.',
-// 	},
-// ]
+validateMany({	id: [(x) => !x && 'Is required.', (x) => x < 0 && 'Must be greater than 0.'],	name: [(x) => !x && 'Is required.'],	surname: [(x) => !x && 'Is required.'],}, [	{		id: -1,		surname: 'Doe',	},	{		id: 13,		name: 'Bob',	},])// Output:// [// 	{// 		id: 'Must be greater than 0.',// 		name: 'Is required.',// 		surname: false,// 	}, {// 		id: false,// 		name: false,// 		surname: 'Is required.',// 	},// ]
 ```
 
 * * *
@@ -112,9 +71,7 @@ Combine multiple validate schemes into one. If multiple schemes contains same va
 <a name="module_core.createValidation"></a>
 
 ### core.createValidation(fn, react, params) ⇒ <code>Object</code> \| <code>null</code>
-Creates validation function with predicate and message.
-Results of validation is ready for translation by react-intl.
-Result is valid if nil or empty is passed. Use required validation if you want to ensure that field is required.
+Creates validation function with predicate and message.Results of validation is ready for translation by react-intl.Result is valid if nil or empty is passed. Use required validation if you want to ensure that field is required.
 
 **Returns**: <code>Object</code> \| <code>null</code> - Message object when fails { message, messageValues } or null if pass  
 

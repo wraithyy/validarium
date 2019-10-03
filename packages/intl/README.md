@@ -17,8 +17,7 @@ This package provides translator for react-inl messages. Also convenient API for
 <a name="module_intl.validateTranslated"></a>
 
 ### intl.validateTranslated ⇒ <code>Object</code>
-Composed validate with translate. Gives you translated result directly.
-Params are curried
+Composed validate with translate. Gives you translated result directly.Params are curried
 
 **Returns**: <code>Object</code> - Translated result.  
 **Sig**: Object -> Object -> Object -> Object  
@@ -35,8 +34,7 @@ Params are curried
 <a name="module_intl.translateResult"></a>
 
 ### intl.translateResult ⇒ <code>Object</code>
-Translate result of validations with `react-intl`.
-We assume that `intl` object is from `react-intl` (usually obtained by `injectIntl`).
+Translate result of validations with `react-intl`.We assume that `intl` object is from `react-intl` (usually obtained by `injectIntl`).
 
 **Returns**: <code>Object</code> - Translated result.  
 
