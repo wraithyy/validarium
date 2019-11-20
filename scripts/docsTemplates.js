@@ -9,6 +9,7 @@ const apiRef = ref => `## API reference
  {{/module}}`;
 
 const frontMatter = (packageName, order) => `---
+path: /${packageName}
 title: '${packageName}'
 order: ${order}
 ---\n`;
