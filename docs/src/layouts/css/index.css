@@ -1,0 +1,85 @@
+/**********
+ Reset
+***********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+html {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, li, ul {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
+    margin: 2rem 0;
+    font-style: normal;
+    font-weight: 200;
+}
+
+ul {
+    margin-left: 1rem;
+}
+
+li, li>*, dt, dd {
+    margin: .5rem 0;
+}
+li>ul{
+    margin-left: 1rem !important;
+}
+
+pre, code {
+    font-family: 'Space Mono', monospace;
+}
+
+h1, h1 > a {
+    font-size: 3.998rem;
+}
+
+h2, h2 > a {
+    font-size: 2.827rem;
+}
+
+h3, h3 > a {
+    font-size: 1.999rem;
+}
+
+h4, h4 > a {
+    font-size: 1.414rem;
+}
+
+h5, h5 > a {
+    font-size: 1rem;
+}
+
+h6, h6 > a {
+    font-size: 1rem;
+}
+
+p, a, li, dt, dd, tr, th {
+    font-size: 1rem;
+}
+
+a {
+    color: #8DC63F;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid black;
+}
